@@ -17,12 +17,13 @@
                 <li class="active"><a href="index.php">Principal</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="registro.php">Registro</a></li>
-                <?php if(!isset($_SESSION['nickname'])) {?>
-                    <li><a href="#">Contacto</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
+                <?php //if(!isset($_SESSION['nickname'])) {?>
+                    
 
-                <?php  } else { ?>
-                    <li><a href="usuario.php">Usuario</a></li>
-                <?php  }?>    
+                <?php // } else { ?>
+                   <!-- <li><a href="usuario.php">Usuario</a></li>  -->
+                <?php  // }?>    
 
             </ul>
 

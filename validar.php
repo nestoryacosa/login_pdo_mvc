@@ -6,6 +6,16 @@ if(isset($_POST['nickname']) && isset($_POST['pwd'])){
     $nick = $_POST['nickname'];
     $pwd = $_POST['pwd'];
 
-    echo UsuarioControlador::login($nick,$pwd);
-}
-?>
+    if(UsuarioControlador::login($nick,$pwd)) {
+        header("location:usuario.php");
+    }else{
+        ?>
+        <?php 
+        include("login.php");
+        ?>       
+            <script>alert("UPS!!, usuario o contraseña no válida");</script>       
+        <?php
+    }
+   
+   
+} ?>

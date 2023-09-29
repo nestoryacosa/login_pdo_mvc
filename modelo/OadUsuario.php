@@ -30,9 +30,10 @@ class OadUsuario extends Usuario{
         $resultado->execute();
 
         if($resultado->rowCount() == 1){
-            return "Usuario encontrado";
+            return true;
+            
         } 
-        return "nombre o contraseña incorrecta";
+        return false;
 
     }
 }
